@@ -2,14 +2,8 @@ import json
 import re
 import statistics
 import requests
-
-print("-------------------------")
-x = input("Do you want to find the best player for your team? (Type Yes or No):")
-
-
-import json
-import requests
 import os
+import http.client
 from dotenv import dotenv_values
 from dotenv.main import load_dotenv
 load_dotenv()
@@ -18,11 +12,11 @@ api = os.getenv("api_key")
 #url = 'https://api.sportradar.us/nba/{access_level}/{version}/{language_code}/league/free_agents.{format}?api_key={your_api_key}'
 #final_url = f'{url}'
 
+print("-------------------------")
+x = input("Do you want to find the best player for your team? (Type Yes or No):")
 
 #url = "https://api.sportradar.us/nba/trial/v7/en/league/free_agents.json?"
 #final_url = f'{url}api_key={api}'
-
-import http.client
 
 conn = http.client.HTTPSConnection("api.sportradar.us")
 
