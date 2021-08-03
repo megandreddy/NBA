@@ -30,7 +30,11 @@ else:
         print(player["full_name"], player["position"], player["height"], player["weight"], player["birthdate"])
         #print(player["position"])
         #for player in mydata:
-    #    print(player["full_name"], player["primary_position"])
+        #print(player["full_name"], player["primary_position"])
+
+
+
+
 #while True:
 #    x = input("Do you want to find the best player for your team? (Type Yes or No): ")
 #    if x.upper() == "NO": #source - .upper https://github.com/s2t2/shopping-cart-with-email-receipts/blob/master/checkout.py
