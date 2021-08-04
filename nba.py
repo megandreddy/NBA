@@ -72,7 +72,7 @@ with open(csv_file_path, "w") as csv_file:
             "weight": player["weight"],
             "birthdate": player["birthdate"],
             "birthplace": player["birth_place"],
-                })
+            })
 
 #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
 #source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
