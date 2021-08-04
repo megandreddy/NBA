@@ -14,7 +14,7 @@ API = os.getenv("api_key")
 
 print("-------------------------")
 x = input("Do you want to find the best player for your team? (Type Yes or No): ")
-if (x == "Yes"):
+if x.upper() == "YES":
     print("Great, let's do this. Here's the entire list of available players...")
 else:
     print("Alright, well good luck building a championship team without us! Have a good day :-)")
@@ -30,16 +30,18 @@ data = res.read()
 #print(data)
 
 y = input("Now, what primary position are you looking for? (Input PG, SG, SF, PF, or C): ")
-if (y == "PG"):
+if y.upper() == "PG":
     print("Here's a list of available Point Guards:")
-if (y == "SG"):
+if y.upper() == "SG":
     print("Here's a list of available Shooting Guards:")
-if (y == "SF"):
+if y.upper() == "SF":
     print("Here's a list of available Small Forwards:")
-if (y == "PF"):
+if y.upper() == "PF":
     print("Here's a list of available Power Forwards:")
-if (y == "C"):
+if y.upper() == "C":
     print("Here's a list of available Centers:")
+else:
+    print("Sorry you have entered an invalid position")
 
 dict_str = data.decode("UTF-8")
 mydata = ast.literal_eval(dict_str)
