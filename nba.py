@@ -52,7 +52,7 @@ if (y == "SG"):
 if (y == "C"):
     print(f"Here's a list of available Centers: with {z} years of experience")
 else:
-    print(f"Sorry currently no {y} players with {z} years of experience.")
+    print(f"Sorry currently no {y} players with {z} years of experience are available.")
 
 for player in free_agents:
     if player["primary_position"] == y and player["experience"] == z:
