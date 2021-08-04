@@ -1,13 +1,9 @@
-import json
-import re
-import statistics
-import requests
 import ast
 import os
 import http.client
-from dotenv import dotenv_values
 from dotenv.main import load_dotenv
 from pprint import pprint
+import re
 load_dotenv()
 
 API = os.getenv("api_key")
