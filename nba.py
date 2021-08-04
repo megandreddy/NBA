@@ -45,19 +45,28 @@ if (y == "C"):
 #else:
 #    print("Sorry")
 
-#z = input("Years of experience: ")
-
 dict_str = data.decode("UTF-8")
 mydata = ast.literal_eval(dict_str)
 free_agents = mydata["free_agents"]
 #pprint(free_agents)
 
+#for player in free_agents:
+#    if player["primary_position"] == y:
+#        if player["experience"] == z:
+#            try:
+#                print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+#            except KeyError:
+#                pass
+#            #source: https://realpython.com/python-keyerror/
+#            #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
+
 for player in free_agents:
-    if player["primary_position"] == y:
-        if player["experience"] == z:
-            try:
-                print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
-            except KeyError:
-                pass
+    if player["primary_position"] == y and player["experience"] == z:
+        try:
+            print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+        except (KeyError, ValueError) as e:
+            pass
+        break
             #source: https://realpython.com/python-keyerror/
             #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
+            #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
