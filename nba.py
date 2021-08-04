@@ -29,14 +29,14 @@ data = res.read()
 
 #print(data)
 
-y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C): ")
+y = input("Now, what primary position are you looking for? (Input PG, SG, SF, PF, or C): ")
 if (y == "PG"):
     print("Here's a list of available Point Guards:")
 if (y == "SG"):
     print("Here's a list of available Shooting Guards:")
 if (y == "SF"):
     print("Here's a list of available Small Forwards:")
-if (y == "SG"):
+if (y == "PF"):
     print("Here's a list of available Power Forwards:")
 if (y == "C"):
     print("Here's a list of available Centers:")
