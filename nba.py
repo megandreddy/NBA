@@ -9,7 +9,7 @@ import csv
 load_dotenv()
 
 API = os.getenv("api_key")
-
+print("Welcome to the Free Agent Searching Tool!")
 print("-------------------------")
 x = input("Do you want to find the best player for your team? (Type Yes or No): ")
 if x.upper() == "YES":
@@ -22,27 +22,31 @@ conn = http.client.HTTPSConnection("api.sportradar.us")
 conn.request("GET", f"/nba/trial/v7/en/league/free_agents.json?api_key={API}")
 res = conn.getresponse()
 data = res.read()
+dict_str = data.decode("UTF-8")
+mydata = ast.literal_eval(dict_str)
+free_agents = mydata["free_agents"]
+
+for player in free_agents:
+    try:
+        print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+    except KeyError as e:
+        pass
 
 y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C): ")
 z = input("Years of experience: ")
 
 if (y == "PG"):
-    print("Here's a list of available Point Guards:")
+    print(f"Here's a list of available Point Guards: with {z} years of experience")
 if (y == "SG"):
-    print("Here's a list of available Shooting Guards:")
+    print(f"Here's a list of available Shooting Guards: with {z} years of experience")
 if (y == "SF"):
-    print("Here's a list of available Small Forwards:")
+    print(f"Here's a list of available Small Forwards: with {z} years of experience")
 if (y == "SG"):
-    print("Here's a list of available Power Forwards:")
+    print(f"Here's a list of available Power Forwards: with {z} years of experience")
 if (y == "C"):
-    print("Here's a list of available Centers:")
-#else:
-#    print("Sorry")
-
-dict_str = data.decode("UTF-8")
-mydata = ast.literal_eval(dict_str)
-free_agents = mydata["free_agents"]
-#pprint(free_agents)
+    print(f"Here's a list of available Centers: with {z} years of experience")
+else:
+    print("Sorry")
 
 for player in free_agents:
     if player["primary_position"] == y and player["experience"] == z:
@@ -50,9 +54,9 @@ for player in free_agents:
             print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
         except KeyError as e:
             pass
-            #source: https://realpython.com/python-keyerror/
-            #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
-            #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
+        #source: https://realpython.com/python-keyerror/
+        #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
+        #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
 
 
 csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
