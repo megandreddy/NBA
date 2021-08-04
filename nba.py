@@ -19,20 +19,6 @@ if (x == "Yes"):
 else:
     print("Alright, well good luck building a championship team without us! Have a good day :-)")
     exit()
-import json
-import requests
-import os
-from dotenv import dotenv_values
-from dotenv.main import load_dotenv
-load_dotenv()
-
-api = os.getenv("api")
-#url = 'https://api.sportradar.us/nba/{access_level}/{version}/{language_code}/league/free_agents.{format}?api_key={your_api_key}'
-#final_url = f'{url}'
-
-
-#url = "https://api.sportradar.us/nba/trial/v7/en/league/free_agents.json?"
-#final_url = f'{url}api_key={api}'
 
 conn = http.client.HTTPSConnection("api.sportradar.us")
 
@@ -59,6 +45,12 @@ dict_str = data.decode("UTF-8")
 mydata = ast.literal_eval(dict_str)
 free_agents = mydata["free_agents"]
 #pprint(free_agents)
+
 for player in free_agents:
-    if player["position"] == y:
-        print(player["full_name"], player["position"], player["height"], player["weight"], player["birthdate"])
+    if player["primary_position"] == y:
+        try:
+            print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+        except KeyError:
+            pass
+            #source: https://realpython.com/python-keyerror/
+            #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
