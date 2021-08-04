@@ -30,6 +30,8 @@ data = res.read()
 #print(data)
 
 y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C): ")
+z = input("Years of experience: ")
+
 if (y == "PG"):
     print("Here's a list of available Point Guards:")
 if (y == "SG"):
@@ -40,8 +42,8 @@ if (y == "SG"):
     print("Here's a list of available Power Forwards:")
 if (y == "C"):
     print("Here's a list of available Centers:")
-else:
-    print("Sorry")
+#else:
+#    print("Sorry")
 
 #z = input("Years of experience: ")
 
@@ -52,9 +54,10 @@ free_agents = mydata["free_agents"]
 
 for player in free_agents:
     if player["primary_position"] == y:
-        try:
-            print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
-        except KeyError:
-            pass
+        if player["experience"] == z:
+            try:
+                print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+            except KeyError:
+                pass
             #source: https://realpython.com/python-keyerror/
             #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
