@@ -9,7 +9,7 @@ import csv
 load_dotenv()
 
 API = os.getenv("api_key")
-print("Welcome to the Free Agent Searching Tool!")
+print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
 x = input("Do you want to find the best player for your team? (Type Yes or No): ")
 if x.upper() == "YES":
@@ -26,9 +26,15 @@ dict_str = data.decode("UTF-8")
 mydata = ast.literal_eval(dict_str)
 free_agents = mydata["free_agents"]
 
+#for player in free_agents:
+#    try:
+#        print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+#    except (KeyError, IndexError) as e:
+#        pass
+
 for player in free_agents:
     try:
-        print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+        print(f'Player Name: {player["full_name"]}, Position: ({player["position"]}), Primary Position: ({player["primary_position"]}), Years of Experience: ({player["experience"]}), College: {player["college"]}, Height (inches): ({player["height"]}), Weight (lbs): ({player["weight"]}), Birthdate: ({player["birthdate"]}), Place of Birth: {player["birth_place"]}')
     except KeyError as e:
         pass
 
@@ -50,10 +56,11 @@ else:
 
 for player in free_agents:
     if player["primary_position"] == y and player["experience"] == z:
-        try:
-            print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
-        except KeyError as e:
-            pass
+        print(f'Player Name: {player["full_name"]}, Position: ({player["position"]}), Primary Position: ({player["primary_position"]}), Years of Experience: ({player["experience"]}), College: {player["college"]}, Height (inches): ({player["height"]}), Weight (lbs): ({player["weight"]}), Birthdate: ({player["birthdate"]}), Place of Birth: {player["birth_place"]}')
+    else:
+        pass
+    if KeyError:    
+        pass        
         #source: https://realpython.com/python-keyerror/
         #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
         #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
