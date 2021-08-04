@@ -129,3 +129,14 @@ for player in free_agents:
             pass
             #source: https://realpython.com/python-keyerror/
             #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
+
+
+#for player in free_agents:
+#    if player["primary_position"] == y:
+#        if player["experience"] == z:
+#            try:
+#                print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
+#            except KeyError:
+#                pass
+#            #source: https://realpython.com/python-keyerror/
+#            #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
