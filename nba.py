@@ -19,16 +19,12 @@ else:
     exit()
 
 conn = http.client.HTTPSConnection("api.sportradar.us")
-
 conn.request("GET", f"/nba/trial/v7/en/league/free_agents.json?api_key={API}")
-
 res = conn.getresponse()
 data = res.read()
 
-#print(data)
-
 y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C): ")
-#z = input("Years of experience: ")
+z = input("Years of experience: ")
 
 if (y == "PG"):
     print("Here's a list of available Point Guards:")
@@ -49,41 +45,11 @@ free_agents = mydata["free_agents"]
 #pprint(free_agents)
 
 for player in free_agents:
-    if player["primary_position"] == y:
+    if player["primary_position"] == y and player["experience"] == z:
         try:
             print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
         except KeyError as e:
             pass
-            #source: https://realpython.com/python-keyerror/
-            #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
-            #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
-
-        csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
-        csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
-
-        with open(csv_file_path, "w") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
-            writer.writeheader()
-            for player in free_agents:
-                writer.writerow({
-                    "full_name": player["full_name"],
-                    "position": player["position"],
-                    "primary_position": player["primary_position"],
-                    "experience": player["experience"],
-                    "college": player["college"],
-                    "height": player["height"],
-                    "weight": player["weight"],
-                    "birthdate": player["birthdate"],
-                    "birthplace": player["birth_place"],
-                })
-
-
-#for player in free_agents:
-#    if player["primary_position"] == y and player["experience"] == z:
-#        try:
-#            print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
-#        except KeyError as e:
-#            pass
             #source: https://realpython.com/python-keyerror/
             #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
             #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
@@ -106,6 +72,7 @@ with open(csv_file_path, "w") as csv_file:
             "weight": player["weight"],
             "birthdate": player["birthdate"],
             "birthplace": player["birth_place"],
-        })
+                })
 
 #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
+#source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
