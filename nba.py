@@ -54,8 +54,10 @@ if (y == "C"):
 else:
     print(f"Sorry currently no {y} players with {z} years of experience are available.")
 
+query_list = []
 for player in free_agents:
     if player["primary_position"] == y and player["experience"] == z:
+        query_list.append(player)
         print(f'Player Name: {player["full_name"]}, Position: ({player["position"]}), Primary Position: ({player["primary_position"]}), Years of Experience: ({player["experience"]}), College: {player["college"]}, Height (inches): ({player["height"]}), Weight (lbs): ({player["weight"]}), Birthdate: ({player["birthdate"]}), Place of Birth: {player["birth_place"]}')
     else:
         pass
@@ -64,26 +66,3 @@ for player in free_agents:
         #source: https://realpython.com/python-keyerror/
         #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
         #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
-
-
-csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
-csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
-
-with open(csv_file_path, "w") as csv_file:
-    writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
-    writer.writeheader()
-    for player in free_agents:
-        writer.writerow({
-            "full_name": player["full_name"],
-            "position": player["position"],
-            "primary_position": player["primary_position"],
-            "experience": player["experience"],
-            "college": player["college"],
-            "height": player["height"],
-            "weight": player["weight"],
-            "birthdate": player["birthdate"],
-            "birthplace": player["birth_place"],
-            })
-
-#source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
-#source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
