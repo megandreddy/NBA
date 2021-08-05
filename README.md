@@ -1,6 +1,6 @@
 # NBA Free Agents
 
-A Python application that utilizes an API from sportradar.us focused on free agents in the NBA. This allows NBA team to easily retrieve key information on available players.
+A Python application that utilizes an API from sportradar.us focused on free agents in the NBA. This allows an NBA team to easily retrieve key information on available players.
 
 ## Group Members
 * Alex Fleshner
@@ -45,7 +45,7 @@ Signup for [Sportradar.us API](https://developer.sportradar.com/member/register)
   1) Obtain a Sportradar.us API Key to be entered in the .env file as (`api_key`).
 
 
-### Enviromental Variables Setup
+### Environmental Variables Setup
 
 Create a new file called ".env" in the root directory of this repo, then copy the contents below into it, adapting the values to match the `api_key` from Sportradar.us.
 
