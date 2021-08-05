@@ -1,5 +1,5 @@
 import ast
-from logging import NullHandler
+from logging import NullHandler, error
 import os
 import http.client
 from dotenv.main import load_dotenv
