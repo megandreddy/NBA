@@ -1,10 +1,7 @@
 import ast
-from logging import NullHandler, error
 import os
 import http.client
 from dotenv.main import load_dotenv
-from pprint import pprint
-import re
 import csv
 load_dotenv()
 
@@ -25,12 +22,6 @@ data = res.read()
 dict_str = data.decode("UTF-8")
 mydata = ast.literal_eval(dict_str)
 free_agents = mydata["free_agents"]
-
-#for player in free_agents:
-#    try:
-#        print(player["full_name"], player["position"], player["primary_position"], player["experience"], player["college"], player["height"], player["weight"], player["birthdate"], player["birth_place"])
-#    except (KeyError, IndexError) as e:
-#        pass
 
 for player in free_agents:
     try:
@@ -54,28 +45,27 @@ if (y == "C"):
 else:
     print(f"Sorry currently no {y} players with {z} years of experience are available.")
 
+
 query_list = []
 for player in free_agents:
     if player["primary_position"] == y and player["experience"] == z:
-        query_list.append(player)
         print(f'Player Name: {player["full_name"]}, Position: ({player["position"]}), Primary Position: ({player["primary_position"]}), Years of Experience: ({player["experience"]}), College: {player["college"]}, Height (inches): ({player["height"]}), Weight (lbs): ({player["weight"]}), Birthdate: ({player["birthdate"]}), Place of Birth: {player["birth_place"]}')
-    else:
-        pass
+        query_list.append(player)
     if KeyError:    
         pass        
-        #source: https://realpython.com/python-keyerror/
-        #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
-        #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
+#source: https://realpython.com/python-keyerror/
+#source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
+#source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
 
-        to_csv = input("Would you like a copy of this information in CSV? ")
-        if (to_csv == "YES"):
-            csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
-            csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
-            with open(csv_file_path, "w") as csv_file:
-                writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
-                writer.writeheader()
-                for player in query_list:
-                    writer.writerow({
+    to_csv = input("Would you like a copy of this information in CSV? ")
+    if (to_csv == "YES"):
+        csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
+        csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
+        with open(csv_file_path, "w") as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
+            writer.writeheader()
+            for player in query_list:
+                writer.writerow({
                         "full_name": player["full_name"],
                         "position": player["position"],
                         "primary_position": player["primary_position"],
@@ -85,9 +75,9 @@ for player in free_agents:
                         "weight": player["weight"],
                         "birthdate": player["birthdate"],
                         "birthplace": player["birth_place"],
-                                    })
-            #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
-            #source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
-        else:
-            print("Thank You!")
+                            })
+#source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
+#source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
+    else:
+        print("Thank You!")
     exit()
