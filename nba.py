@@ -45,7 +45,6 @@ if (y == "C"):
 else:
     print(f"Sorry currently no {y} players with {z} years of experience are available.")
 
-
 query_list = []
 for player in free_agents:
     if player["primary_position"] == y and player["experience"] == z:
@@ -57,8 +56,8 @@ for player in free_agents:
 #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
 #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
 
-    to_csv = input("Would you like a copy of this information in CSV? ")
-    if (to_csv == "YES"):
+    to_csv = input("Would you like a copy of this information in CSV? (Type Yes or No) ")
+    if to_csv.upper == "YES":
         csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
         csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
         with open(csv_file_path, "w") as csv_file:
