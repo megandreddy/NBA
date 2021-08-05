@@ -32,6 +32,19 @@ for player in free_agents:
 y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C): ")
 z = input("Years of experience: ")
 
+#if y.upper() == "PG":
+#    print(f"Here's a list of available Point Guards: with {z} years of experience")
+#if y.upper() == "SG":
+#    print(f"Here's a list of available Shooting Guards: with {z} years of experience")
+#if y.upper() == "SF":
+#    print(f"Here's a list of available Small Forwards: with {z} years of experience")
+#if y.upper() == "SG":
+#    print(f"Here's a list of available Power Forwards: with {z} years of experience")
+#if y.upper() == "C":
+#    print(f"Here's a list of available Centers: with {z} years of experience")
+#else:
+#    print(f"Sorry currently no {y} players with {z} years of experience are available.")
+
 if (y == "PG"):
     print(f"Here's a list of available Point Guards: with {z} years of experience")
 if (y == "SG"):
