@@ -67,27 +67,27 @@ for player in free_agents:
         #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
         #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
 
-    to_csv = input("Would you like a copy of this information in CSV? ")
-    if (to_csv == "YES"):
-        csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
-        csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
-        with open(csv_file_path, "w") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
-            writer.writeheader()
-            for player in query_list:
-                writer.writerow({
-                    "full_name": player["full_name"],
-                    "position": player["position"],
-                    "primary_position": player["primary_position"],
-                     "experience": player["experience"],
-                    "college": player["college"],
-                     "height": player["height"],
-                      "weight": player["weight"],
-                      "birthdate": player["birthdate"],
-                      "birthplace": player["birth_place"],
-                                   })
-        #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
-        #source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
-    else:
-        print("Thank You!")
-exit()
+        to_csv = input("Would you like a copy of this information in CSV? ")
+        if (to_csv == "YES"):
+            csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
+            csv_headers = ["full_name", "position", "primary_position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
+            with open(csv_file_path, "w") as csv_file:
+                writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
+                writer.writeheader()
+                for player in query_list:
+                    writer.writerow({
+                        "full_name": player["full_name"],
+                        "position": player["position"],
+                        "primary_position": player["primary_position"],
+                        "experience": player["experience"],
+                        "college": player["college"],
+                        "height": player["height"],
+                        "weight": player["weight"],
+                        "birthdate": player["birthdate"],
+                        "birthplace": player["birth_place"],
+                                    })
+            #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
+            #source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
+        else:
+            print("Thank You!")
+    exit()
