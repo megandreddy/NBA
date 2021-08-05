@@ -79,14 +79,13 @@ for player in free_agents:
                     "full_name": player["full_name"],
                     "position": player["position"],
                     "primary_position": player["primary_position"],
-                    "experience": player["experience"],
+                     "experience": player["experience"],
                     "college": player["college"],
-                    "height": player["height"],
-                    "weight": player["weight"],
-                    "birthdate": player["birthdate"],
-                    "birthplace": player["birth_place"],
-                    })
-
+                     "height": player["height"],
+                      "weight": player["weight"],
+                      "birthdate": player["birthdate"],
+                      "birthplace": player["birth_place"],
+                                   })
         #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
         #source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
     else:
