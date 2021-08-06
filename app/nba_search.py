@@ -104,7 +104,7 @@ for player in clean_players:
 to_csv = input("Would you like a copy of this information in CSV? (Type Yes or No): ")
 if to_csv.upper() == "YES":
     #csv_file_path = "data/free_agents.csv" # source: https://www.youtube.com/watch?v=UXAVOP1oCog&t=847s
-    csv_file_path = os.path.join(os.path.dirname(__file__), "..", "data", "free_agents.csv")
+    csv_file_path = os.path.join(os.path.dirname(__file__), "..", "data", "free_agents.csv") # # source: https://www.youtube.com/watch?v=UXAVOP1oCog&t=847s
     csv_headers = ["name", "general_position", "position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
     with open(csv_file_path, "w") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=csv_headers)
