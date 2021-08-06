@@ -1,12 +1,13 @@
 import ast
 import os
 import http.client
-from dotenv.main import load_dotenv
 import csv
-load_dotenv()
 from pprint import pprint
+from dotenv.main import load_dotenv
+load_dotenv()
 
 API = os.getenv("api_key")
+
 print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
 x = input("Do you want to find the best player for your team? (Type Yes or No): ")
