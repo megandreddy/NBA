@@ -13,67 +13,67 @@ API = os.getenv("api_key")
 
 print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
-z = input("Which team do you want to be the GM for? ")
-print("Great, you are the GM of the {z}. Here's your current roster:")
-if (z == "Lakers"):
+desired_team = input("Which team do you want to be the GM for? ")
+print("Great, you are the GM of the {desired_team}. Here's your current roster:")
+if (desired_team == "Lakers"):
     team_id = '583ecae2-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Warriors"):
+if (desired_team == "Warriors"):
     team_id = '583ec825-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Celtics"):
+if (desired_team == "Celtics"):
     team_id = '583eccfa-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Knicks"):
+if (desired_team == "Knicks"):
     team_id = '583ec70e-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Suns"):
+if (desired_team == "Suns"):
     team_id = '583ecfa8-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Bucks"):
+if (desired_team == "Bucks"):
     team_id = '583ecefd-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Nets"):
+if (desired_team == "Nets"):
     team_id = '583ec9d6-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Raptors"):
+if (desired_team == "Raptors"):
     team_id = '583ecda6-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "76ers"):
+if (desired_team == "76ers"):
     team_id = '583ec87d-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Mavericks"):
+if (desired_team == "Mavericks"):
     team_id = '583ecf50-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Clippers"):
+if (desired_team == "Clippers"):
     team_id = '583ecdfb-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Spurs"):
+if (desired_team == "Spurs"):
     team_id = '583ecd4f-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Jazz"):
+if (desired_team == "Jazz"):
     team_id = '583ece50-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Heat"):
+if (desired_team == "Heat"):
     team_id = '583ecea6-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Wizards"):
+if (desired_team == "Wizards"):
     team_id = '583ec8d4-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Trail Blazers"):
+if (desired_team == "Trail Blazers"):
     team_id = '583ed056-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Hawks"):
+if (desired_team == "Hawks"):
     team_id = '583ecb8f-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Kings"):
+if (desired_team == "Kings"):
     team_id = '583ed0ac-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Rockets"):
+if (desired_team == "Rockets"):
     team_id = '583ecb3a-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Hornets"):
+if (desired_team == "Hornets"):
     team_id = '583ec97e-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Nuggets"):
+if (desired_team == "Nuggets"):
     team_id = '583ed102-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Cavaliers"):
+if (desired_team == "Cavaliers"):
     team_id = '583ec773-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Thunder"):
+if (desired_team == "Thunder"):
     team_id = '583ecfff-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Pelicans"):
+if (desired_team == "Pelicans"):
     team_id = '583ecc9a-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Pacers"):
+if (desired_team == "Pacers"):
     team_id = '583ec7cd-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Timberwolves"):
+if (desired_team == "Timberwolves"):
     team_id = '583eca2f-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Grizzlies"):
+if (desired_team == "Grizzlies"):
     team_id = '583eca88-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Magic"):
+if (desired_team == "Magic"):
     team_id = '583ed157-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Pistons"):
+if (desired_team == "Pistons"):
     team_id = '583ec928-fb46-11e1-82cb-f4ce4684ea4c'
-if (z == "Bulls"):
+if (desired_team == "Bulls"):
     team_id = '583ec5fd-fb46-11e1-82cb-f4ce4684ea4c'
 else:
     print("Team not found...")
