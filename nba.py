@@ -77,15 +77,15 @@ y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C):
 z = input("Years of experience: ")
 
 if (y == "PG"):
-    print(f"Here's a list of available Point Guards: with {z} years of experience")
+    print(f"Here's a list of available Point Guards: with {z} years of experience:")
 if (y == "SG"):
-    print(f"Here's a list of available Shooting Guards: with {z} years of experience")
+    print(f"Here's a list of available Shooting Guards: with {z} years of experience:")
 if (y == "SF"):
-    print(f"Here's a list of available Small Forwards: with {z} years of experience")
+    print(f"Here's a list of available Small Forwards: with {z} years of experience:")
 if (y == "SG"):
-    print(f"Here's a list of available Power Forwards: with {z} years of experience")
+    print(f"Here's a list of available Power Forwards: with {z} years of experience:")
 if (y == "C"):
-    print(f"Here's a list of available Centers: with {z} years of experience")
+    print(f"Here's a list of available Centers: with {z} years of experience:")
 else:
     print(f"Sorry currently no {y} players with {z} years of experience are available.")
 
@@ -100,7 +100,7 @@ for player in clean_players:
 #source: https://stackoverflow.com/questions/15653966/ignore-keyerror-and-continue-program
 #source: https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
 
-to_csv = input("Would you like a copy of this information in CSV? (Type Yes or No) ")
+to_csv = input("Would you like a copy of this information in CSV? (Type Yes or No): ")
 if to_csv.upper() == "YES":
     csv_file_path = "/Users/larrydoroger/Desktop/NBA.csv"
     csv_headers = ["name", "general_position", "position", "experience", "college", "height", "weight", "birthdate", "birthplace"]
