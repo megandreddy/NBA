@@ -4,7 +4,6 @@ import csv
 import ast
 import http.client
 import pandas as pd
-from pprint import pprint
 from dotenv.main import load_dotenv
 from pprint import pprint
 load_dotenv()
@@ -80,14 +79,6 @@ if (desired_team == "Bulls"):
 else:
     print("Team not found...")
 
-#r = requests.get(final_url)
-#print(r.text)
-#parsed_response = json.loads(r.text)
-#api = os.getenv("api")
-#conn.request("GET","/nba/trial/v7/en/games/2013/12/21/schedule.json?api_key={api}")
-#url = https://api.sportradar.us/nba/trial/v7/en/teams/
-#final_url = f'{url}583ecae2-fb46-11e1-82cb-f4ce4684ea4c/profile.json?api_key={api}'
-
 conn = http.client.HTTPSConnection("api.sportradar.us")
 conn.request("GET", f"/nba/trial/v7/en/teams/{team_id}/profile.json?api_key={API}")
 res_nba_teams = conn.getresponse()
@@ -95,10 +86,6 @@ nba_teams_data = res_nba_teams.read()
 nba_teams_dict_str = nba_teams_data.decode("UTF-8")
 nba_teams_datas = ast.literal_eval(nba_teams_dict_str)
 team_players = nba_teams_datas["players"]
-#pprint(team_players)
-#all_teams_data = ast.literal_eval(teams_dict_str)
-#free_agents = mydata["free_agents"]
-#pprint(all_teams_data.decode("utf-8"))
 
 clean_team_players = []
 for item in team_players:
@@ -149,7 +136,6 @@ for item in clean_team_players:
     except KeyError as e:
         pass
 
-#print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
 x = input("Do you want to find the best free agent for your team? (Type Yes or No): ")
 if x.upper() == "YES":
