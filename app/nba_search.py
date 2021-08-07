@@ -268,5 +268,6 @@ if to_csv.upper() == "YES":
 #source: csv related: https://github.com/Fleshner/robo-advisor/blob/main/app/robo_advisor.py
 #source: https://github.com/s2t2/robo-advisor-screencast/blob/v3-testing/app/robo_advisor.py
 else:
-    print("Thank You!")
+    print("Thank you for using our application!")
+    print("Have a great day!")
     exit()
