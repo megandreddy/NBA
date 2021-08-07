@@ -14,7 +14,7 @@ API = os.getenv("api_key")
 print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
 desired_team = input("Which team do you want to be the GM for? ")
-print("Great, you are the GM of the {desired_team}. Here's your current roster:")
+print(f"Great, you are the GM of the {desired_team}. Here's your current roster:")
 if (desired_team == "Lakers"):
     team_id = '583ecae2-fb46-11e1-82cb-f4ce4684ea4c'
 if (desired_team == "Warriors"):
