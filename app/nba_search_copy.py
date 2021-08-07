@@ -13,6 +13,8 @@ API = os.getenv("api_key")
 
 print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
+print("NBA Teams: Lakers, Warriors, Celtics, Knicks, Suns, Bucks, Nets, Raptors, 76ers, Mavericks, Clippers, Spurs, Jazz, Heat, Wizards, Trail Blazers, Hawks, Kings, Rockets, Hornets, Nuggets, Cavaliers, Pelicans, Pacers, Timberwolves, Grizzlies, Magic, Pistons, Bulls")
+print("-------------------------")
 desired_team = input("Which team do you want to be the GM for? ")
 print(f"Great, you are the GM of the {desired_team}. Here's your current roster:")
 if (desired_team == "Lakers"):
@@ -149,7 +151,7 @@ for item in clean_team_players:
 
 #print("Welcome to the Free Agent Search Tool!")
 print("-------------------------")
-x = input("Do you want to find the best player for your team? (Type Yes or No): ")
+x = input("Do you want to find the best free agent for your team? (Type Yes or No): ")
 if x.upper() == "YES":
     print("Great, let's do this. Here's the entire list of available players...")
 else:
@@ -214,7 +216,7 @@ for player in clean_players:
         pass
 
 y = input("Now, what position are you looking for? (Input PG, SG, SF, PF, or C): ")
-z = input("Years of experience: ")
+z = input("How many years of professional experience are you looking for?: ")
 
 if (y == "PG"):
     print(f"Here's a list of available Point Guards: with {z} years of experience:")
