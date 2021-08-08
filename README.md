@@ -15,7 +15,7 @@ A Python application that utilizes an API from sportradar.us focused on free age
 
 ## Installation
 
-Fork this [remote repository]() under your own control, then "clone" or download your remote copy onto your local computer.
+Fork this [remote repository](https://github.com/larrydor/NBA) under your own control, then "clone" or download your remote copy onto your local computer.
 
 Then navigate there from the command line (subsequent commands assume you are running them from the local repository's root directory):
 
@@ -62,7 +62,7 @@ api_key="abc123"
 Run the Python script:
 
 ```py
-python nba.py
+python app/nba_search.py
 ```
 
 > NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment.
