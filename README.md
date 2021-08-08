@@ -2,7 +2,7 @@
 
 # National Basketball Association - Team Roster and Free Agent Search Application
 
-A Python application that utilizes an APIs from sportradar.us focused on National Basketball Association (NBA) team rosters and available free agents. This application allows a user to easily retrieve key information on the current team lineup and any available free agents to sign if needed.
+A Python application that utilizes National Basketball Association (NBA) focused APIs from sportradar.us to retrieve all team rosters and available free agents. This application allows a user to easily retrieve key information on any current NBA team lineup and query for available free agents to sign if needed. Furthermore, we have added CSV functionality to seamlessly allow a user to export the list of available free agents.
 
 ## Group Members
 * Alex Fleshner
