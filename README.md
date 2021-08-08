@@ -70,7 +70,7 @@ python app/nba_search.py
 > NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment.
 
 ## Reference
-Thank you to Professor Rossetti for providing great instruction and assistance during this course! As well as a reference README file and CSV modules configuration instructions within GitHub.
+Thank you to Professor Rossetti for providing great instruction and assistance during this course! As well as a reference README file and CSV module configuration instructions within GitHub.
 
 1. Source: https://raw.githubusercontent.com/prof-rossetti/my-first-python-app/main/README.md
 1. Source: https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/modules/csv.md
