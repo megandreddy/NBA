@@ -1,8 +1,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/17097606dbcde4fa4d37/maintainability)](https://codeclimate.com/github/larrydor/NBA/maintainability)
 
-# NBA Free Agents
+# National Basketball Association - Team Roster and Free Agents Search Application
 
-A Python application that utilizes an API from sportradar.us focused on free agents in the NBA. This allows an NBA team to easily retrieve key information on available players.
+A Python application that utilizes an APIs from sportradar.us focused on National Basketball Association (NBA) team rosters and available free agents. This application allows a user to easily retrieve key information on the current team lineup and any available free agents to sign if needed.
 
 ## Group Members
 * Alex Fleshner
