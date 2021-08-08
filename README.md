@@ -2,7 +2,7 @@
 
 # National Basketball Association - Team Roster and Free Agent Search Application
 
-A Python application that utilizes National Basketball Association (NBA) focused APIs from sportradar.us to retrieve all team rosters and available free agents. This application allows a user to easily retrieve key information on any current NBA team lineup and query for available free agents to sign if needed. Furthermore, we have added CSV functionality to seamlessly allow a user to export the list of available free agents.
+A Python application that utilizes National Basketball Association (NBA) focused APIs from sportradar.us to retrieve all team rosters and available free agents. This application allows a user to easily retrieve key information on team players and search for available free agents with an experience requirement if desired. Furthermore, we have added CSV functionality to seamlessly allow a user to export the free agents data.
 
 ## Group Members
 * Alex Fleshner
@@ -70,7 +70,7 @@ python app/nba_search.py
 > NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment.
 
 ## Reference
-Thank you to Professor Rossetti for providing great assistance during this course. As well as a reference README file and CSV modules configuration instructions within GitHub.
+Thank you to Professor Rossetti for providing great instruction and assistance during this course. As well as a reference README file and CSV modules configuration instructions within GitHub.
 
 1. Source: https://raw.githubusercontent.com/prof-rossetti/my-first-python-app/main/README.md
 1. Source: https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/modules/csv.md
