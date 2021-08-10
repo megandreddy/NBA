@@ -1,3 +1,4 @@
 requests
 http.client
 python-dotenv
+pytest
