@@ -79,6 +79,25 @@ if (desired_team == "Bulls"):
 else:
     print("Team not found...")
 
+
+# prevents unnecessary or duplicative network requests
+# fixture only loaded when a specific test needs it
+# module-level fixture only invoked once for all tests
+
+
+# #pip install pytest
+# import pytest 
+# @pytest.fixture(scope="module")
+# # def parsed_response():
+# #     import requests
+# #     import json
+# #     print("MAKING A NETWORK REQUEST...")
+#     response = requests.get("https://www.example.com/api/")
+#     return json.loads(response.text)
+
+
+
+
 conn = http.client.HTTPSConnection("api.sportradar.us")
 conn.request("GET", f"/nba/trial/v7/en/teams/{team_id}/profile.json?api_key={API}")
 res_nba_teams = conn.getresponse()
@@ -86,6 +105,19 @@ nba_teams_data = res_nba_teams.read()
 nba_teams_dict_str = nba_teams_data.decode("UTF-8")
 nba_teams_datas = ast.literal_eval(nba_teams_dict_str)
 team_players = nba_teams_datas["players"]
+
+
+
+# import pytest
+# @pytest.fixture(scope="module")
+# def parsed_response():
+#     import requests
+#     import json
+#     print("MAKING A NETWORK REQUEST...")
+#     # response = requests.get("https://www.example.com/api/")
+#     return json.loads(response.text)
+
+
 
 clean_team_players = []
 for item in team_players:
@@ -151,6 +183,18 @@ data = res.read()
 dict_str = data.decode("UTF-8")
 mydata = ast.literal_eval(dict_str)
 free_agents = mydata["free_agents"]
+
+
+
+# @pytest.fixture(scope="module")
+# def parsed_response():
+#     import requests
+#     import json
+#     print("MAKING A NETWORK REQUEST...")
+#     # response = requests.get("https://www.example.com/api/")
+#     return json.loads(response.text)
+
+
 
 clean_players = []
 for player in free_agents:
