@@ -18,5 +18,4 @@ def parsed_response():
     nba_teams_data = res_nba_teams.read()
     nba_teams_dict_str = nba_teams_data.decode("UTF-8")
     nba_teams_datas = ast.literal_eval(nba_teams_dict_str)
-    team_players = nba_teams_datas["players"]
-    return json.loads(team_players)
+    print(nba_teams_datas)
