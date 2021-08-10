@@ -6,7 +6,6 @@ import ast
 from dotenv.main import load_dotenv
 import http.client
 load_dotenv()
-
 API = os.getenv("api_key")
 
 @pytest.fixture(scope="module")
@@ -18,5 +17,5 @@ def parsed_response():
     nba_teams_data = res_nba_teams.read()
     nba_teams_dict_str = nba_teams_data.decode("UTF-8")
     nba_teams_datas = ast.literal_eval(nba_teams_dict_str)
-    #print(nba_teams_datas)
-    return json.loads(nba_teams_datas)
+    print(team_players)
+    return nba_teams_datas
